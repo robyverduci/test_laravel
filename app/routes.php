@@ -15,3 +15,10 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::get('test', function()
+{
+	return View::make('test');
+});
+
+Route::resource('clientes','ClientesController');
