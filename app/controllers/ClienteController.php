@@ -1,6 +1,6 @@
 <?php
 
-class ClientesController extends \BaseController {
+class ClienteController extends \BaseController {
 
 	/**
 	 * Display a listing of clientes
@@ -9,11 +9,20 @@ class ClientesController extends \BaseController {
 	 */
 	public function index()
 	{
-		$clientes = Cliente::all();
+		$clienti = Cliente::with('ordini')->all();
 
-		return View::make('clientes.index', compact('clientes'));
+		return View::make('clientes.index', compact('clienti'));
 	}
 
+	/**
+	 * [test description]
+	 * @param  string $rrr [description]
+	 * @return [type]      [description]
+	 */
+	public function test($rrr='')
+	{
+		
+	}
 	/**
 	 * Show the form for creating a new cliente
 	 *

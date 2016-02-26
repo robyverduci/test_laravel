@@ -21,4 +21,9 @@ Route::get('test', function()
 	return View::make('test');
 });
 
-Route::resource('clientes','ClientesController');
+/**
+ * 
+ */
+Route::get('clienti/index',array('uses'=>'ClienteController@index','as'=>'cliente.index'));
+
+//Route::resource('clientes','ClientesController');
